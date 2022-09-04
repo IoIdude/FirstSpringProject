@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator Post</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <style>
+            input[type=text] {
+                width: 652px;
+                height: 60px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border-radius: 5%;
+                border-width: 1px;
+            }
+
+            button {
+                background: white;
+                border-width: 1px;
+                border-radius: 15%;
+                width: 80px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+    <button formmethod="get" onclick="window.location.href='/'">Назад</button>
+    <form method="post" action="/post">
+        <div>
+            <div>
+                <label>
+                    <input type="text" id="1" placeholder="Введите ваше выражение" name="value">
+                </label>
+            </div>
+            <div>
+                <button type="submit">Рассчитать</button>
+                <button type="reset">Сбросить</button>
+            </div>
+        </div>
+    </form>
+
+    <p th:text="${answer}">
+    </body>
+</html>
