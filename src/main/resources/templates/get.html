@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculator Get</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator Get</title>
 
-    <style>
-        input[type=text] {
-            width: 652px;
-            height: 60px;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border-radius: 5%;
-            border-width: 1px;
-        }
+        <style>
+            input[type=text] {
+                width: 652px;
+                height: 60px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border-radius: 5%;
+                border-width: 1px;
+            }
 
-        button {
-            background: white;
-            border-width: 1px;
-            border-radius: 15%;
-            width: 80px;
-            height: 30px;
-        }
+            button {
+                background: white;
+                border-width: 1px;
+                border-radius: 15%;
+                width: 80px;
+                height: 30px;
+            }
 
-        .form {
-            padding: 50px;
-            position: fixed; top: 50%; left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-    </style>
-</head>
-<body>
-    <div class="form">
-        <button formmethod="get" onclick="window.location.href='/'">Назад</button>
+            .form {
+                padding: 50px;
+                position: fixed; top: 50%; left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <button formmethod="get" onclick="window.location.href='/'">Назад</button>
 
-        <form method="get" action="/get">
-            <div>
+            <form method="get" action="/get">
                 <div>
-                    <label>
-                        <input type="text" id="1" placeholder="Введите ваше выражение" name="value">
-                    </label>
+                    <div>
+                        <label>
+                            <input type="text" id="1" placeholder="Введите ваше выражение" name="value">
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit">Рассчитать</button>
+                        <button type="reset">Сбросить</button>
+                    </div>
                 </div>
-                <div>
-                    <button type="submit">Рассчитать</button>
-                    <button type="reset">Сбросить</button>
-                </div>
-            </div>
-        </form>
+            </form>
 
-        <p th:text="${answer}">
-    </div>
-</body>
+            <p th:text="${answer}">
+        </div>
+    </body>
 </html>
