@@ -28,7 +28,7 @@ public class MainController {
 
         String command = String.format("python %s %s", pyth_file, val.replace(" ", ""));
 
-        System.out.println("\nExecuting python script file now ......");
+
         Process pcs = Runtime.getRuntime().exec(command);
         pcs.waitFor();
 
@@ -63,7 +63,7 @@ public class MainController {
 
         String command = String.format("python %s %s", pyth_file, val.replace(" ", ""));
 
-        System.out.println("\nExecuting python script file now ......");
+
         Process pcs = Runtime.getRuntime().exec(command);
         pcs.waitFor();
 
