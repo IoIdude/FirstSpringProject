@@ -22,24 +22,35 @@
             width: 80px;
             height: 30px;
         }
+
+        .form {
+            padding: 50px;
+            position: fixed; top: 50%; left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
-    <button formmethod="get" onclick="window.location.href='/'">Назад</button>
-    <form method="get" action="/get">
-        <div>
-            <div>
-                <label>
-                    <input type="text" id="1" placeholder="Введите ваше выражение" name="value">
-                </label>
-            </div>
-            <div>
-                <button type="submit">Рассчитать</button>
-                <button type="reset">Сбросить</button>
-            </div>
-        </div>
-    </form>
+    <div class="form">
+        <button formmethod="get" onclick="window.location.href='/'">Назад</button>
 
-    <p th:text="${answer}">
+        <form method="get" action="/get">
+            <div>
+                <div>
+                    <label>
+                        <input type="text" id="1" placeholder="Введите ваше выражение" name="value">
+                    </label>
+                </div>
+                <div>
+                    <button type="submit">Рассчитать</button>
+                    <button type="reset">Сбросить</button>
+                </div>
+            </div>
+        </form>
+
+        <p th:text="${answer}">
+    </div>
 </body>
 </html>
